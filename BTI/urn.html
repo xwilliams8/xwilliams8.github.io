@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Urn - Because the Internet</title>
+    
+    <style>
+        #title
+        {
+            text-align: center;
+        }
+        
+        
+        body
+        {
+            background-color: #ee5351;
+        }
+        
+        .wrapper
+        {
+            border: 5px solid #881615;
+            background-color: #a7271a;
+            margin: 10px auto;
+            border-radius: 10px;
+            
+            
+        }
+        
+        #content
+        {
+            align-self: center; 
+            width: 1132px;
+            margin: 10px;
+            margin-left: 16px;
+            float: left;
+        }
+        
+        #navigation
+        {
+            float: left;
+            margin-left: auto;
+            width: 150px;
+            text-align: center;
+        }
+        
+        #link
+        {
+            color: #f3658d;
+            
+        }
+        
+        #total
+        {
+            width: 1334px;
+        }
+        
+        .group:after 
+            {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+        
+        #cover
+        {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        iframe
+        {
+            display: block;
+            margin: 0 auto;
+        }
+        
+         #lyricbox
+        {
+            text-align: center;
+        }
+        
+    </style>
+    
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+    <script>
+    
+        function getLyrics(song) {
+        
+        
+        $.get("lyrics.php", {song:song},
+         
+              function(song) {
+            $("#lyricbox").html(song); 
+        });
+            
+
+        }
+    
+    </script>
+    
+</head>
+    
+<body>    
+    <h1 id="title">"Urn"</h1>
+    
+    <div id="total">
+    <div class="wrapper" id="navigation">
+        
+        <h3>Navigation</h3>
+        <a href="BTIhome.html" id="link">Home</a><br><br>
+        <a href="introcrawl.html" id="link">The Library(Intro)/Crawl</a><br><br>
+        <a href="WORLDSTAR.html" id="link">WORLDSTAR</a><br><br>
+        <a href="theworstguys.html" id="link">Dial Up/The Worst Guys</a><br><br>
+        <a href="shadows.html" id="link">Shadows</a><br><br>
+        <a href="telegraph.html" id="link">Telegraph Ave ("Oakland by Lloyd")</a><br><br>
+        <a href="sweatpants.html" id="link">Sweatpants</a><br><br>
+        <a href="3005.html" id="link">3005</a><br><br>
+        <a href="theparty.html" id="link">Playing Around Before the Party/The Party</a><br><br>
+        <a href="noexit.html" id="link">No Exit</a><br><br>
+        <a href="flightofthenavigator.html" id="link">Death By Numbers/Flight of the Navigator</a><br><br>
+        <a href="zealots.html" id="link">Zealots of Stockholm (Free Information)</a><br><br>
+        <a href="urn.html" id="link">Urn</a><br><br>
+        <a href="pinktoes.html" id="link">Pink Toes</a><br><br>
+        <a href="earth.html" id="link">Earth: The Oldest Computer (The Last Night)</a><br><br>
+        <a href="life.html" id="link">Life: The Biggest Troll (Andrew Auernheimer)</a><br><br>
+
+
+
+    
+    </div>
+    
+    <div id="content" class="wrapper">
+    
+        <h2>Put Content here.</h2>
+        <form>
+            <input type="button" value="Get Lyrics" onclick="getLyrics('urn')">
+        </form>
+   
+        <div id="lyricbox"></div>
+
+        
+    </div>
+    </div>
+    
+</body>
+
+</html>
